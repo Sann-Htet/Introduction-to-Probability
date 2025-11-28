@@ -1,0 +1,22 @@
+```{r}
+v <- c(3, 1, 4, 1, 5, 9)
+sum(v)
+```
+```{r}
+n <- 100 # number of cards
+r <- replicate(10^4, sum(sample(n)==(1:n))) # shuffle: count matches
+sum(r>=1)/10^4 # proportion with a match
+```
+
+```{r}
+1 - prod((365-k+1):365)/365^k
+```
+```{r}
+pbirthday(23, coincident=3)
+qbirthday(0.5, coincident=3)
+```
+
+```{r}
+r <- replicate(10^4, max(tabulate(sample(1:365, 23, replace = TRUE))))
+sum(r>=2)/10^4
+```
